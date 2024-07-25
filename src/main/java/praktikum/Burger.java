@@ -33,7 +33,7 @@ public class Burger {
     public float getPrice() {
         float price = bun.getPrice() * 2;
 
-        for (Ingredient ingredient : ingredients) {
+          for (Ingredient ingredient : ingredients) {
             price += ingredient.getPrice();
         }
 
@@ -41,15 +41,15 @@ public class Burger {
     }
 
     public String getReceipt() {
-        StringBuilder receipt = new StringBuilder(String.format("(==== %s ====)%n", bun.getName()));
+        StringBuilder receipt = new StringBuilder(String.format("(==== %s ====)\n", bun.getName()));
 
         for (Ingredient ingredient : ingredients) {
-            receipt.append(String.format("= %s %s =%n", ingredient.getType().toString().toLowerCase(),
+            receipt.append(String.format("= %s %s =\n", ingredient.getType().toString().toLowerCase(),
                     ingredient.getName()));
         }
 
-        receipt.append(String.format("(==== %s ====)%n", bun.getName()));
-        receipt.append(String.format("%nPrice: %f%n", getPrice()));
+        receipt.append(String.format("(==== %s ====)\n", bun.getName()));
+        receipt.append(String.format("\nPrice: %f\n", getPrice()));
 
         return receipt.toString();
     }
