@@ -13,7 +13,6 @@ import praktikum.IngredientType;
 @RunWith(MockitoJUnitRunner.class)
 public class BurgerTest {
 
-
     @Test
     public void addIngredientTest() {
         Ingredient ingredient = new Ingredient(IngredientType.SAUCE, "Кисло-сладкий", 6);
@@ -77,7 +76,6 @@ public class BurgerTest {
         Mockito.when(ingredient.getName()).thenReturn("Кетчуп");
         Mockito.when(burger.getPrice()).thenReturn(price);
         Assert.assertEquals("(==== Ржаной ====)\n= sauce Кетчуп =\n(==== Ржаной ====)\n\nPrice: 25,000000\n", burger.getReceipt());
-
     }
 
 

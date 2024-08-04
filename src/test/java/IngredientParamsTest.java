@@ -10,8 +10,6 @@ public class IngredientParamsTest {
 
     private final IngredientType type;
 
-
-
     public IngredientParamsTest(IngredientType type) {
         this.type = type;
     }
@@ -29,7 +27,6 @@ public class IngredientParamsTest {
         Ingredient ingredient = new Ingredient(type, "Что-то", 6);
         IngredientType actual = ingredient.getType();
         Assert.assertEquals(type, actual);
-
     }
 
 }

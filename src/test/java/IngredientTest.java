@@ -6,7 +6,6 @@ import praktikum.IngredientType;
 
 public class IngredientTest {
 
-
     @Test
     public void getPriceTest() {
         Ingredient ingredient = new Ingredient(IngredientType.SAUCE, "Кисло-сладкий", 6);
